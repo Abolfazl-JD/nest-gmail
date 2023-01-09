@@ -63,5 +63,5 @@ export class UsersService {
   async checkPassword(passToCheck: string, encryptedPass: string) {
     const isPasswordCorrect = await compare(passToCheck, encryptedPass)
     if(!isPasswordCorrect) throw new UnauthorizedException('password incorrect')
-}
+  }
 }
